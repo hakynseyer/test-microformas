@@ -198,19 +198,41 @@ h2 {
 
 .form {
   width: 80%;
+  height: 10em;
   margin: 0 auto;
   padding: 0 1rem 1rem 1rem;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--color-secondary);
 }
 
 .form__box {
   width: 100%;
+  height: 2em;
   display: flex;
-  justify-content: space-between;
-  background-color: var(--color-secondary);
+  justify-content: flex-start;
 }
 
 .form__box__label {
-  background-color: red; 
+  width: 30%;
+  font-size: 13px;
+}
+
+.form__box__input {
+  width: 50%;
+  margin-left: 2em;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--color-support-B);
+  border: solid 2px var(--color-secondary-B);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.form__box__span {
+  width: 70%;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
 }

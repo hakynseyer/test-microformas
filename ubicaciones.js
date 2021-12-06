@@ -20,7 +20,7 @@ dataJSON = {
     ]
 }
 
-class listeners {
+class tableListeners {
   activeLower = false
   activeUpper = false
 
@@ -69,7 +69,7 @@ class listeners {
   }
 }
 
-class createTable extends listeners {
+class createTable extends tableListeners {
   #main = document.getElementById("main")
   #data = null
 
