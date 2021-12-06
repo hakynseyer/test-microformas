@@ -195,3 +195,22 @@ h2 {
   top: -9em;
   left: 0em;
 }
+
+.form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-secondary);
+}
+
+.form__box__label {
+  background-color: red; 
+}
