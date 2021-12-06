@@ -1,0 +1,197 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  border: none;
+  outline: none;
+
+  --color-main: lightslategrey;
+  --color-secondary: #71c265;
+  --color-secondary-B: #c8ed79;
+  --color-support: white;
+  --color-support-B: #ff00a2;
+}
+
+body {
+  background-color: var(--color-main);
+}
+
+h1, h2 {
+  padding: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+}
+
+h2 {
+  color: var(--color-secondary)
+}
+
+.menu {
+  /* background-color: var(--color-support); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.menu__header {
+  width: 100%;
+  text-align: left;
+  padding-left: 3em;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+.menu__button {
+  width: 20%;
+  height: 3em;
+  border: solid 2px var(--color-secondary-B);
+  color: var(--color-secondary);
+  margin-right: 1em;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: all 100ms ease-in;
+}
+
+.menu__button:last-child {
+  margin-right: 0em;
+}
+
+.menu__button:hover {
+  cursor: pointer;
+  /* font-weight: bold; */
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-B)
+}
+
+.table {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.table__row {
+  width: 100%;
+  border-bottom: solid 1px var(--color-secondary-B);
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-secondary);
+}
+
+.table__row--header {
+  background-color: var(--color-secondary-B);
+  border: solid 2px var(--color-support);
+  padding: 0;
+}
+
+.table__row--header > * {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.table__row--header > .table__row__col {
+  border-right: solid 2px var(--color-support);
+  text-align: center;
+}
+.table__row--header > .table__row__col:last-child {
+  border-right: none;
+}
+.table__row--header > .table__row__col:nth-child(2) {
+  color: black;
+}
+
+.table__row:last-child {
+  border-bottom: none;
+}
+
+.table__row__col {
+  padding: 1em;
+  display: inline-block;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table__row__col:nth-child(1) {
+  font-weight: bold;
+  width: 5%;
+}
+.table__row__col:nth-child(2) {
+  width: 25%;
+  color: var(--color-support-B)
+}
+.table__row__col:nth-child(3) {
+  width: 25%;
+}
+.table__row__col:nth-child(4) {
+  width: 20%;
+}
+.table__row__col:nth-child(5) {
+  width: 20%;
+}
+
+.table__row__col > *:nth-child(1) {
+  margin: 0 1em;
+}
+
+.table__row__col__button {
+  width: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 .5em;
+  color: var(--color-support-B);
+  border: 1px solid  var(--color-support-B);
+  text-transform: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.table__row__col__button--active {
+  background-color: var(--color-support-B);
+  color: var(--color-support);
+}
+
+
+.table__row__col__button--first:hover .table__row__col__notice,
+.table__row__col__button--first:active .table__row__col__notice {
+  opacity: 1;
+}
+.table__row__col__button--second:hover .table__row__col__notice--last,
+.table__row__col__button--second:active .table__row__col__notice--last {
+  opacity: 1;
+}
+
+.table__row__col__notice {
+  position: absolute;
+  background-color: var(--color-support-B);
+  color: white;
+  width: 8em;
+  height: 8em;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -9em;
+  left: -5em;
+  opacity: 0;
+  transition: opacity 100ms ease-in-out;
+}
+
+.table__row__col__notice--last {
+  top: -9em;
+  left: 0em;
+}
