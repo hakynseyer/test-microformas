@@ -5,9 +5,15 @@
   border: none;
   outline: none;
 
-  --color-main: lightslategrey;
+  /* --color-main: lightslategrey;
   --color-secondary: #71c265;
   --color-secondary-B: #c8ed79;
+  --color-support: white;
+  --color-support-B: #ff00a2; */
+  
+  --color-main: #b5b0d1;
+  --color-secondary: #2b0461;
+  --color-secondary-B: #9d4dbf;
   --color-support: white;
   --color-support-B: #ff00a2;
 }
@@ -29,6 +35,22 @@ h1 {
 
 h2 {
   color: var(--color-secondary)
+}
+
+h4 {
+  width: 13em;
+  font-size: 11px;
+  padding: 1em;
+  cursor: default;
+  color: var(--color-secondary);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-left: 3em;
+  margin-bottom: 3em;
+  text-align:  center;
+  background-color: var(--color-main);
+  overflow: hidden;
 }
 
 .menu {
@@ -67,7 +89,7 @@ h2 {
   cursor: pointer;
   /* font-weight: bold; */
   background-color: var(--color-secondary);
-  color: var(--color-secondary-B)
+  color: var(--color-support)
 }
 
 .table {
@@ -80,16 +102,15 @@ h2 {
 
 .table__row {
   width: 100%;
-  border-bottom: solid 1px var(--color-secondary-B);
+  border-bottom: solid 1px var(--color-support);
   padding: 1em 0;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-secondary);
+  /* background-color: var(--color-secondary); */
 }
 
 .table__row--header {
-  background-color: var(--color-secondary-B);
-  border: solid 2px var(--color-support);
+  background-color: var(--color-secondary);
   padding: 0;
 }
 
@@ -97,11 +118,17 @@ h2 {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 13px;
+  color: var(--color-support)
 }
 
 .table__row--header > .table__row__col {
-  border-right: solid 2px var(--color-support);
+  border-right: dotted 1px var(--color-support);
   text-align: center;
+}
+
+.table__row--header > .table__row__col,
+.table__row--header > .table__row__col > * {
+  color: var(--color-support);
 }
 .table__row--header > .table__row__col:last-child {
   border-right: none;
@@ -122,6 +149,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--color-secondary);
 }
 
 .table__row__col:nth-child(1) {
@@ -165,7 +193,6 @@ h2 {
   color: var(--color-support);
 }
 
-
 .table__row__col__button--first:hover .table__row__col__notice,
 .table__row__col__button--first:active .table__row__col__notice {
   opacity: 1;
@@ -189,6 +216,7 @@ h2 {
   left: -5em;
   opacity: 0;
   transition: opacity 100ms ease-in-out;
+  pointer-events: none;
 }
 
 .table__row__col__notice--last {
@@ -204,7 +232,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background-color: var(--color-secondary);
 }
 
 .form__box {
@@ -217,6 +244,7 @@ h2 {
 .form__box__label {
   width: 30%;
   font-size: 13px;
+  color: var(--color-secondary)
 }
 
 .form__box__input {
@@ -228,11 +256,56 @@ h2 {
   border: solid 2px var(--color-secondary-B);
   border-radius: 10px;
   text-align: center;
+  background-color: transparent;
 }
 
 .form__box__span {
   width: 70%;
   font-size: 13px;
   font-weight: bold;
+  text-align: center;
+  color: var(--color-support-B)
+}
+
+.calendar {
+  width: 80%;
+  height: 10em;
+  margin: 0 auto;
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar__label {
+  width: 100%;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.calendar__input {
+  width: 30%;
+  font-size: 15px;
+  text-align: center;
+  border: solid 2px var(--color-secondary-B);
+  color: var(--color-support-B);
+  font-weight: bold;
+  padding: 1em;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.calendar__output {
+  width: 80%;
+  color: var(--color-support-B);
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: capitalize;
+  display: inline-block;
   text-align: center;
 }

@@ -323,5 +323,3 @@ class createForm extends formListeners {
     this.getNationalize(input, spanOutput)
   }
 }
-
-new createForm()

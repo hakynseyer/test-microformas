@@ -17,6 +17,32 @@ dataJSON = {
             "city": "Guadalajara",
             "description": "Centro historico"
         },
+
+
+        {
+            "latitude": 40.417438,
+            "longitude": -3.693363,
+            "city": "Cancún",
+            "description": "Parque Fundidora"
+        },
+        {
+            "latitude": 40.407015,
+            "longitude": -3.691163,
+            "city": "Puebla",
+            "description": "Centro historico"
+        },
+        {
+            "latitude": 40.417438,
+            "longitude": -3.693363,
+            "city": "Morelia",
+            "description": "Parque Fundidora"
+        },
+        {
+            "latitude": 40.407015,
+            "longitude": -3.691163,
+            "city": "Aguascalientes",
+            "description": "Centro historico"
+        },
     ]
 }
 
@@ -178,5 +204,3 @@ class createTable extends tableListeners {
     return table
   }
 }
-
-new createTable(dataJSON)
